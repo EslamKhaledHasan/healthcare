@@ -12,11 +12,20 @@ namespace health_care
 {
     public partial class patients : Form
     {
+        functions Con;
+
+
         public patients()
         {
             InitializeComponent();
+            Con = new functions();
+            ShowPatients();
         }
-
+        private void ShowPatients()
+        {
+            string Query = "Select from PatientTbl";
+            PatientLst.DataSource = Con.GetData(Query);
+        }
         private void patients_Load(object sender, EventArgs e)
         {
 
@@ -38,6 +47,11 @@ namespace health_care
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
         {
 
         }

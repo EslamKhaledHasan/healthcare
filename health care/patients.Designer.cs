@@ -44,26 +44,27 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PatAddTb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.PatPhoneTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.PatName = new System.Windows.Forms.TextBox();
+            this.PatNameTbl = new System.Windows.Forms.TextBox();
             this.l = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.GenCb = new System.Windows.Forms.ComboBox();
+            this.DobTbl = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.PatientLst = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -202,6 +203,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.PatientLst);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(14, 325);
             this.panel4.Name = "panel4";
@@ -224,61 +226,62 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Teal;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.DobTbl);
+            this.panel3.Controls.Add(this.GenCb);
+            this.panel3.Controls.Add(this.DeleteBtn);
+            this.panel3.Controls.Add(this.SaveBtn);
+            this.panel3.Controls.Add(this.EditBtn);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.PatAddTb);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.PatPhoneTb);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.PatName);
+            this.panel3.Controls.Add(this.PatNameTbl);
             this.panel3.Location = new System.Drawing.Point(14, 18);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1418, 289);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button3
+            // DeleteBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(1198, 232);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 33);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.DeleteBtn.BackColor = System.Drawing.Color.Red;
+            this.DeleteBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DeleteBtn.Location = new System.Drawing.Point(1198, 232);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(99, 33);
+            this.DeleteBtn.TabIndex = 18;
+            this.DeleteBtn.Text = "delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // SaveBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(1198, 176);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 33);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.SaveBtn.BackColor = System.Drawing.Color.Green;
+            this.SaveBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveBtn.Location = new System.Drawing.Point(1198, 176);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(99, 33);
+            this.SaveBtn.TabIndex = 17;
+            this.SaveBtn.Text = "save";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
-            // button1
+            // EditBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(1198, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 33);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.EditBtn.BackColor = System.Drawing.Color.SlateGray;
+            this.EditBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.EditBtn.Location = new System.Drawing.Point(1198, 118);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(99, 33);
+            this.EditBtn.TabIndex = 8;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -313,13 +316,13 @@
             this.label9.Text = "Patient Address";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // PatAddTb
             // 
-            this.textBox5.Location = new System.Drawing.Point(847, 118);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(345, 147);
-            this.textBox5.TabIndex = 13;
+            this.PatAddTb.Location = new System.Drawing.Point(847, 118);
+            this.PatAddTb.Multiline = true;
+            this.PatAddTb.Name = "PatAddTb";
+            this.PatAddTb.Size = new System.Drawing.Size(345, 147);
+            this.PatAddTb.TabIndex = 13;
             // 
             // label8
             // 
@@ -332,13 +335,13 @@
             this.label8.Text = "Patient Pone";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // PatPhoneTb
             // 
-            this.textBox4.Location = new System.Drawing.Point(431, 232);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(338, 33);
-            this.textBox4.TabIndex = 11;
+            this.PatPhoneTb.Location = new System.Drawing.Point(431, 232);
+            this.PatPhoneTb.Multiline = true;
+            this.PatPhoneTb.Name = "PatPhoneTb";
+            this.PatPhoneTb.Size = new System.Drawing.Size(338, 33);
+            this.PatPhoneTb.TabIndex = 11;
             // 
             // label7
             // 
@@ -351,14 +354,6 @@
             this.label7.Text = "Patient date of birth";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(431, 118);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(338, 33);
-            this.textBox3.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,21 +365,13 @@
             this.label6.Text = "Patient Gender";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // PatNameTbl
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 232);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 33);
-            this.textBox2.TabIndex = 7;
-            // 
-            // PatName
-            // 
-            this.PatName.Location = new System.Drawing.Point(16, 118);
-            this.PatName.Multiline = true;
-            this.PatName.Name = "PatName";
-            this.PatName.Size = new System.Drawing.Size(338, 33);
-            this.PatName.TabIndex = 5;
+            this.PatNameTbl.Location = new System.Drawing.Point(16, 118);
+            this.PatNameTbl.Multiline = true;
+            this.PatNameTbl.Name = "PatNameTbl";
+            this.PatNameTbl.Size = new System.Drawing.Size(338, 33);
+            this.PatNameTbl.TabIndex = 5;
             // 
             // l
             // 
@@ -400,17 +387,17 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this.button1;
+            this.guna2Elipse1.TargetControl = this.EditBtn;
             // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 15;
-            this.guna2Elipse2.TargetControl = this.button2;
+            this.guna2Elipse2.TargetControl = this.SaveBtn;
             // 
             // guna2Elipse3
             // 
             this.guna2Elipse3.BorderRadius = 15;
-            this.guna2Elipse3.TargetControl = this.button3;
+            this.guna2Elipse3.TargetControl = this.DeleteBtn;
             // 
             // guna2Elipse4
             // 
@@ -427,6 +414,37 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
+            // 
+            // GenCb
+            // 
+            this.GenCb.FormattingEnabled = true;
+            this.GenCb.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.GenCb.Location = new System.Drawing.Point(16, 241);
+            this.GenCb.Name = "GenCb";
+            this.GenCb.Size = new System.Drawing.Size(338, 24);
+            this.GenCb.TabIndex = 19;
+            // 
+            // DobTbl
+            // 
+            this.DobTbl.Checked = true;
+            this.DobTbl.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DobTbl.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DobTbl.Location = new System.Drawing.Point(431, 118);
+            this.DobTbl.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DobTbl.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DobTbl.Name = "DobTbl";
+            this.DobTbl.Size = new System.Drawing.Size(255, 36);
+            this.DobTbl.TabIndex = 20;
+            this.DobTbl.Value = new System.DateTime(2022, 11, 21, 19, 16, 40, 208);
+            // 
+            // PatientLst
+            // 
+            this.PatientLst.Location = new System.Drawing.Point(17, 99);
+            this.PatientLst.Name = "PatientLst";
+            this.PatientLst.Size = new System.Drawing.Size(1388, 226);
+            this.PatientLst.TabIndex = 17;
             // 
             // patients
             // 
@@ -473,20 +491,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PatAddTb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PatPhoneTb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox PatName;
+        private System.Windows.Forms.TextBox PatNameTbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label l;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button EditBtn;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
@@ -494,5 +510,8 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox6;
+        protected System.Windows.Forms.ComboBox GenCb;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DobTbl;
+        private System.Windows.Forms.Panel PatientLst;
     }
 }
