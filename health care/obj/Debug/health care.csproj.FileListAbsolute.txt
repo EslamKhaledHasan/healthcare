@@ -1,0 +1,13 @@
+D:\tasks\windows tasks\health care\health care\bin\Debug\health care.exe.config
+D:\tasks\windows tasks\health care\health care\bin\Debug\health care.exe
+D:\tasks\windows tasks\health care\health care\bin\Debug\health care.pdb
+D:\tasks\windows tasks\health care\health care\bin\Debug\Guna.UI2.dll
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.csproj.AssemblyReference.cache
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.csproj.SuggestedBindingRedirects.cache
+D:\tasks\windows tasks\health care\health care\obj\Debug\health_care.login.resources
+D:\tasks\windows tasks\health care\health care\obj\Debug\health_care.Properties.Resources.resources
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.csproj.GenerateResource.cache
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.csproj.CoreCompileInputs.cache
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.csproj.CopyComplete
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.exe
+D:\tasks\windows tasks\health care\health care\obj\Debug\health care.pdb

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace health_care
 {
-    public partial class Form1 : Form
+    public partial class Patents : Form
     {
-        public Form1()
+        public Patents()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
