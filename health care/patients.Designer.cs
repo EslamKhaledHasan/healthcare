@@ -62,6 +62,7 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -149,7 +151,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 29);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Diagnosi";
+            this.label3.Text = "Diagnostis";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox4
@@ -395,10 +397,23 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(14, 325);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1418, 341);
             this.panel4.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(581, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(236, 41);
+            this.label11.TabIndex = 16;
+            this.label11.Text = " Patients list";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // patients
             // 
@@ -423,6 +438,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,5 +477,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private System.Windows.Forms.Label label11;
     }
 }
