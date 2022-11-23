@@ -45,10 +45,10 @@ namespace health_care
                 MessageBox.Show("Patient Adress!!!");
         }
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        int key = 0;
+        private void PacientList(object sender, DataColumnChangeEventArgs e)
         {
-
+            PatNameTb.Text = PatientsList.SelectedRows.Cells[1].values.ToString();
         }
     }
 }
