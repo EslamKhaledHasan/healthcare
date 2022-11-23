@@ -50,14 +50,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TCcost = new System.Windows.Forms.TextBox();
+            this.TName = new System.Windows.Forms.TextBox();
+            this.TestList = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +86,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.TestList);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(14, 325);
             this.panel4.Name = "panel4";
@@ -270,57 +272,57 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Teal;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.DeleteBtn);
+            this.panel3.Controls.Add(this.SaveBtn);
+            this.panel3.Controls.Add(this.EditBtn);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.TCcost);
+            this.panel3.Controls.Add(this.TName);
             this.panel3.Location = new System.Drawing.Point(14, 18);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1418, 289);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button6
+            // DeleteBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(406, 231);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 33);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "delete";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.DeleteBtn.BackColor = System.Drawing.Color.Red;
+            this.DeleteBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DeleteBtn.Location = new System.Drawing.Point(406, 231);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(99, 33);
+            this.DeleteBtn.TabIndex = 19;
+            this.DeleteBtn.Text = "delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // SaveBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.Green;
-            this.button5.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(406, 176);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 33);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "save";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.SaveBtn.BackColor = System.Drawing.Color.Green;
+            this.SaveBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveBtn.Location = new System.Drawing.Point(406, 176);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(99, 33);
+            this.SaveBtn.TabIndex = 17;
+            this.SaveBtn.Text = "save";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // EditBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.SlateGray;
-            this.button4.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(406, 118);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 33);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
+            this.EditBtn.BackColor = System.Drawing.Color.SlateGray;
+            this.EditBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.EditBtn.Location = new System.Drawing.Point(406, 118);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(99, 33);
+            this.EditBtn.TabIndex = 8;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -358,23 +360,30 @@
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox2
+            // TCcost
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 232);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 33);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TCcost.Location = new System.Drawing.Point(16, 232);
+            this.TCcost.Multiline = true;
+            this.TCcost.Name = "TCcost";
+            this.TCcost.Size = new System.Drawing.Size(338, 33);
+            this.TCcost.TabIndex = 7;
+            this.TCcost.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // TName
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 118);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 33);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TName.Location = new System.Drawing.Point(16, 118);
+            this.TName.Multiline = true;
+            this.TName.Name = "TName";
+            this.TName.Size = new System.Drawing.Size(338, 33);
+            this.TName.TabIndex = 5;
+            this.TName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // TestList
+            // 
+            this.TestList.Location = new System.Drawing.Point(17, 81);
+            this.TestList.Name = "TestList";
+            this.TestList.Size = new System.Drawing.Size(1379, 234);
+            this.TestList.TabIndex = 17;
             // 
             // TestsList
             // 
@@ -430,13 +439,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TCcost;
+        private System.Windows.Forms.TextBox TName;
+        private System.Windows.Forms.Panel TestList;
     }
 }

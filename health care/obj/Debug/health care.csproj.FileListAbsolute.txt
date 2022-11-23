@@ -16,3 +16,4 @@ D:\tasks\windows tasks\health care\health care\obj\Debug\health_care.diagnostics
 D:\tasks\windows tasks\health care\health care\bin\Debug\health care.mdf
 D:\tasks\windows tasks\health care\health care\bin\Debug\health care_log.ldf
 D:\tasks\windows tasks\health care\health care\obj\Debug\health_care.patients.resources
+D:\tasks\windows tasks\health care\health care\obj\Debug\health_care.TestsList.resources

@@ -17,11 +17,36 @@ namespace health_care
         {
             InitializeComponent();
             Con = new Functions();
+            ShowTest();
         }
         private void ShowTest()
         {
             string Query = "select * from Testtbl";
             Tests.DataSource = Con.GetData(Query);
+        }
+        private void Clear()
+        {
+            TName.Text = "";
+            TCcost.Text = "";
+        }
+        private void SaveBtn_click(object sender ,EventArgs r)
+        {
+            if (TName.Text == "" || TCcost.Text == "" ||)
+            {
+                MessageBox.Show("Missing Dadta!!");
+            }
+            else
+            {
+                string TName = TName.Text;
+                int Cost = Convert.ToInt32(TCcost.Text);
+               
+                string Query = "insert into TsttTb1 valuues('{0}','{1}')";
+                Query = string.Format(Query, TName, Cost);
+                Con.SetData(Query);
+                ShowTest();
+                Clear();
+                MessageBox.Show("Patient Adress!!!");
+            }
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {

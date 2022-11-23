@@ -91,6 +91,7 @@
     <Compile Include="patients.Designer.cs">
       <DependentUpon>patients.cs</DependentUpon>
     </Compile>
+    <Compile Include="PatNameTb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests.cs">
@@ -98,6 +99,9 @@
     </Compile>
     <Compile Include="Tests.Designer.cs">
       <DependentUpon>Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests1.cs">
+      <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="diagnostics.resx">
       <DependentUpon>diagnostics.cs</DependentUpon>
