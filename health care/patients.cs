@@ -61,5 +61,41 @@ namespace health_care
                 key = Convert.ToInt32(PatientsList.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+        private void EditBtb_Click(object sender,EventArgs e)
+        {
+            if (PatNameTb.Text == "" || PatAddTb.Text == "" || GenCb.SelectedIndex == -1)
+            {
+                MessageBox.Show("Missing Dadta!!");
+            }
+            else
+            {
+                string Patient = PatNameTb.Text;
+                string Gender = GenCb.SelectedItem.ToString();
+                string BDate = DOBTb.Value.Date.ToString();
+                string Phone = PatPhoneTb.Text;
+                string Address = PatAddTb.Text;
+                string Query = "Update PatientTb1 set Patname = '{0}',PatGen = '{1}',PatDOB ='{2}',PatPhone= '{3}',PatAdd'{4}' where patient code = '{5}";
+                Query = string.Format(Query, Patient, Gender, BDate, Phone, Address,key);
+                Con.SetData(Query);
+                ShowPaints();
+                MessageBox.Show("Patient Updated!!!");
+            }
+        }
+        private void DeleteBtn_click(object seder , EventArgs e)
+        {
+            if (key==0)
+            {
+                MessageBox.Show("Select a patient!");
+            }
+            else
+            {
+                
+                string Query = "Delete from  PatientTb1 where  patient code = '{0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowPaints();
+                MessageBox.Show("Patient Deleted!!!");
+            }
+        }
     }
 }
