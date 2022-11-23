@@ -41,6 +41,7 @@ namespace health_care
                 Query = string.Format(Query, Patient, Gender, BDate, Phone, Address);
                 Con.SetData(Query);
                 ShowPaints();
+                Clear();
                 MessageBox.Show("Patient Adress!!!");
             }
         }
@@ -76,10 +77,22 @@ namespace health_care
                 string Address = PatAddTb.Text;
                 string Query = "Update PatientTb1 set Patname = '{0}',PatGen = '{1}',PatDOB ='{2}',PatPhone= '{3}',PatAdd'{4}' where patient code = '{5}";
                 Query = string.Format(Query, Patient, Gender, BDate, Phone, Address,key);
+                
                 Con.SetData(Query);
+                
                 ShowPaints();
+                Clear();
                 MessageBox.Show("Patient Updated!!!");
+
             }
+        }
+        private void Clear()
+        {
+            PatNameTb.Text = "";
+            GenCb.SelectedIndex = -1;
+            PatPhoneTb.Text = "";
+            PatAddTb.Text = "";
+
         }
         private void DeleteBtn_click(object seder , EventArgs e)
         {
@@ -94,6 +107,7 @@ namespace health_care
                 Query = string.Format(Query, key);
                 Con.SetData(Query);
                 ShowPaints();
+                Clear();
                 MessageBox.Show("Patient Deleted!!!");
             }
         }
