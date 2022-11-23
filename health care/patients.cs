@@ -25,6 +25,7 @@ namespace health_care
         {
             string Query = "Select from PatientTbl";
             PatientLst.DataSource = Con.GetData(Query);
+            PatientLst.DataSource ource = PatientLst.DataSource = Con.GetDatCon.GetData(Query);
         }
         private void patients_Load(object sender, EventArgs e)
         {
