@@ -10,15 +10,17 @@ namespace health_care
 {
     internal class functions
     {
+        internal object GetDatCon;
         private SqlConnection Con;
         private SqlCommand Cmd;
         private DataTable Dt;
+        private DataSet dt;
         private SqlDataAdapter Sda;
         private string Constr;
         
         public functions()
-        { 
-        Constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\DELL\\Documents\\health care.mdf\";Integrated Security=True;Connect Timeout=30" ;
+        {
+            Constr = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\C:\\Users\\DELL\\Documents\\health care.mdf\;Integrated Security=True;Connect Timeout=30";
             Con = new SqlConnection(Constr);
             Cmd = new SqlCommand();
             Cmd.Connection = Con;
@@ -29,7 +31,7 @@ namespace health_care
             Dt = new DataTable();
             Sda = new SqlDataAdapter(Query,Con);
             Sda.Fill(dt);
-            return Dt;
+            return dt;
         }
 
         public int SetDate(String Query)
@@ -44,6 +46,11 @@ namespace health_care
             Cnt = Cmd.ExecuteNonQuery();
             Con.Close();
             return Cnt;
+        }
+
+        internal void SetData(string query)
+        {
+            throw new NotImplementedException();
         }
     }
 }

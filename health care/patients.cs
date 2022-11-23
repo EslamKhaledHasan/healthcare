@@ -16,23 +16,22 @@ namespace health_care
         public patients()
         {
             InitializeComponent();
-            Con = new functions();
-            ShowPatients();
+            Con = new Functions();
+            ShowPaints();
         }
-        private void ShowPatients()
+        private void ShowPaints()
         {
             string Query = "select * from patientstbl";
             PatientsList.DataSource = Con.GetData(Query);
         }
-        private void patients_Load(object sender, EventArgs e)
+        private void PatientsList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(PatNameTb.Text == "" || PatAddTb.Text == "" || GenCb.SelectedIndex == -1)
-        {
+            {
                 MessageBox.Show("Missing Dadta!!");
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
+            }
+            else
+            {
                 string Patient = PatNameTb.Text;
                 string Gender = GenCb.SelectedItem.ToString();
                 string BDate = DOBTb.Value.Date.ToString();
@@ -43,12 +42,24 @@ namespace health_care
                 Con.SetData(Query);
                 ShowPaints();
                 MessageBox.Show("Patient Adress!!!");
-        }
+            }
         }
         int key = 0;
         private void PacientList(object sender, DataColumnChangeEventArgs e)
         {
-            PatNameTb.Text = PatientsList.SelectedRows.Cells[1].values.ToString();
+            PatNameTb.Text = PatientsList.SelectedRows[0].Cells[1].Value.ToString();
+            GenCb.SelectedItem = PatientsList.SelectedRows[0].Cells[2].Value.ToString();
+            DOBTb.Text = PatientsList.SelectedRows[0].Cells[3].Value.ToString();
+            PatPhoneTb.Text = PatientsList.SelectedRows[0].Cells[4].Value.ToString();
+            PatAddTb.Text = PatientsList.SelectedRows[0].Cells[5].Value.ToString();
+            if(PatNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(PatientsList.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
     }
 }
