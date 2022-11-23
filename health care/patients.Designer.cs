@@ -34,6 +34,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.Name = "patients";
+            this.Load += new System.EventHandler(this.patients_Load);
             this.ResumeLayout(false);
 
         }

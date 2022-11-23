@@ -111,5 +111,10 @@ namespace health_care
                 MessageBox.Show("Patient Deleted!!!");
             }
         }
+
+        private void patients_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
