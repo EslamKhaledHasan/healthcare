@@ -48,6 +48,19 @@ namespace health_care
                 MessageBox.Show("Patient Adress!!!");
             }
         }
+        int key = 0;
+        private void TestList_CellContent(object sender ,DataColumnChangeEventArgs e)
+        {
+            TNText = TestList.SelectedRows[0].Cells[1].Value.ToString();
+            TCcost.*PatientsList.SelectedRows[0].Cells[2].Value.ToString();
+            DOBTb.Text = PatientsList.SelectedRows[0].Cells[3].Value.ToString();
+            PatPhoneTb.Text = PatientsList.SelectedRows[0].Cells[4].Value.ToString();
+            PatAddTb.Text = PatientsList.SelectedRows[0].Cells[5].Value.ToString();
+            if (PatNameTb.Text == "")
+            {
+                key = 0;
+            }
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
